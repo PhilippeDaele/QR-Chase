@@ -15,21 +15,9 @@ struct NextView: View { // this is just for testing
     }
 }
 
-struct CreateView: View {
-    var body: some View{
-        Text("Testing2")
-    }
-}
-
-struct ScoreView: View {
-    var body: some View{
-        Text("Testing3")
-    }
-}
-
 func rulePage(){
     if let window = UIApplication.shared.windows.first {
-            window.rootViewController = UIHostingController(rootView: newPage())
+            window.rootViewController = UIHostingController(rootView: MainPage())
             window.makeKeyAndVisible()
         }
 }

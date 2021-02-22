@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A105C34C25E178E400127F23 /* FrontPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A105C34B25E178E400127F23 /* FrontPage.swift */; };
-		A105C34F25E179BB00127F23 /* newPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A105C34E25E179BB00127F23 /* newPage.swift */; };
 		A105C35625E17A4300127F23 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A105C35525E17A4300127F23 /* RunView.swift */; };
+		A105C35925E17CA500127F23 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A105C35825E17CA500127F23 /* MainPage.swift */; };
+		A105C35D25E186DA00127F23 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A105C35C25E186DA00127F23 /* CreateView.swift */; };
+		A12656D625E438C20071173F /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12656D525E438C20071173F /* ScoreView.swift */; };
 		A1EF0EBE25D17BFF004DE4A8 /* paperChaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF0EBD25D17BFF004DE4A8 /* paperChaseApp.swift */; };
 		A1EF0EC025D17BFF004DE4A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF0EBF25D17BFF004DE4A8 /* ContentView.swift */; };
 		A1EF0EC225D17C00004DE4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0EC125D17C00004DE4A8 /* Assets.xcassets */; };
@@ -26,8 +28,10 @@
 
 /* Begin PBXFileReference section */
 		A105C34B25E178E400127F23 /* FrontPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPage.swift; sourceTree = "<group>"; };
-		A105C34E25E179BB00127F23 /* newPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPage.swift; sourceTree = "<group>"; };
 		A105C35525E17A4300127F23 /* RunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
+		A105C35825E17CA500127F23 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		A105C35C25E186DA00127F23 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		A12656D525E438C20071173F /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		A1EF0EBA25D17BFF004DE4A8 /* paperChase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paperChase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EF0EBD25D17BFF004DE4A8 /* paperChaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paperChaseApp.swift; sourceTree = "<group>"; };
 		A1EF0EBF25D17BFF004DE4A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				A1EF0EBC25D17BFF004DE4A8 /* paperChase */,
-				A1EF0EBB25D17BFF004DE4A8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,21 +72,25 @@
 				A1EF0EBA25D17BFF004DE4A8 /* paperChase.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A1EF0EBC25D17BFF004DE4A8 /* paperChase */ = {
 			isa = PBXGroup;
 			children = (
 				A1EF0ECD25D1AAFF004DE4A8 /* Assets */,
-				A1EF0EBD25D17BFF004DE4A8 /* paperChaseApp.swift */,
-				A1EF0EBF25D17BFF004DE4A8 /* ContentView.swift */,
-				A105C35525E17A4300127F23 /* RunView.swift */,
-				A105C34E25E179BB00127F23 /* newPage.swift */,
+				A1EF0EC325D17C00004DE4A8 /* Preview Content */,
+				A1EF0EBB25D17BFF004DE4A8 /* Products */,
 				A1EF0EC125D17C00004DE4A8 /* Assets.xcassets */,
 				A1EF0EC625D17C00004DE4A8 /* Info.plist */,
-				A1EF0EC325D17C00004DE4A8 /* Preview Content */,
+				A1EF0EBF25D17BFF004DE4A8 /* ContentView.swift */,
+				A105C35C25E186DA00127F23 /* CreateView.swift */,
+				A1EF0EBD25D17BFF004DE4A8 /* paperChaseApp.swift */,
+				A105C35525E17A4300127F23 /* RunView.swift */,
+				A105C35825E17CA500127F23 /* MainPage.swift */,
 				A1EF0ED125D1AB8A004DE4A8 /* LoopingPlayer.swift */,
 				A105C34B25E178E400127F23 /* FrontPage.swift */,
+				A12656D525E438C20071173F /* ScoreView.swift */,
 			);
 			path = paperChase;
 			sourceTree = "<group>";
@@ -190,11 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A105C34F25E179BB00127F23 /* newPage.swift in Sources */,
 				A105C34C25E178E400127F23 /* FrontPage.swift in Sources */,
+				A12656D625E438C20071173F /* ScoreView.swift in Sources */,
 				A105C35625E17A4300127F23 /* RunView.swift in Sources */,
 				A1EF0EC025D17BFF004DE4A8 /* ContentView.swift in Sources */,
 				A1EF0EBE25D17BFF004DE4A8 /* paperChaseApp.swift in Sources */,
+				A105C35D25E186DA00127F23 /* CreateView.swift in Sources */,
+				A105C35925E17CA500127F23 /* MainPage.swift in Sources */,
 				A1EF0ED225D1AB8A004DE4A8 /* LoopingPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

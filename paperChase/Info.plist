@@ -39,6 +39,11 @@
 		<true/>
 		<key>UIImageName</key>
 		<string>paper</string>
+		<key></key>
+		<dict>
+			<key>UIImageName</key>
+			<string></string>
+		</dict>
 	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
@@ -52,6 +57,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Would like to save QR code.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
