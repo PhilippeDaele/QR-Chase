@@ -34,10 +34,6 @@ struct RunView: View {
                     .font(.largeTitle)
                 Spacer()
                 
-                // QRscanner stuff
-                if self.scannedCode != nil {
-                    NavigationLink("Next page", destination: NextView(), isActive: .constant(true)).hidden()
-                }
                 
                 Button(action: {
                     self.isPresentingScanner = true
@@ -55,6 +51,12 @@ struct RunView: View {
                 .sheet(isPresented: $isPresentingScanner) {
                     CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
                 }
+                
+                // QRscanner stuff
+                if self.scannedCode != nil {
+                    NavigationLink("Next page", destination: runningView())
+                }
+                
                 Spacer()
             }
         }
@@ -66,15 +68,17 @@ struct RunView: View {
         switch result{
         case .success(let code):
             let details = code.components(separatedBy: "\n")
-            guard details.count == 2 else { return }
-            
-            let startCoord = details[0]
-            let endCoord = details[1]
-            
-            print(startCoord)
-            print(endCoord)
-            
-            
+            guard details.count == 4 else { return }
+                
+            let startLat = details[0]
+            let startLong = details[1]
+            let endLat = details[2]
+            let endLong = details[3]
+
+            print(startLat)
+            print(startLong)
+            print(endLat)
+            print(endLong)
             
         case .failure(let error):
             print("Scanning failed!")
