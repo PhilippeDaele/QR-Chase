@@ -10,6 +10,8 @@ import SwiftUI
 
 struct MapManager: UIViewRepresentable {
     
+    @Binding var scannedCode: String?
+    
     class Coordinator: NSObject, MKMapViewDelegate{
         var parent: MapManager
         
@@ -50,6 +52,6 @@ struct MapManager: UIViewRepresentable {
 
 struct MapManager_Previews: PreviewProvider {
     static var previews: some View {
-        MapManager()
+        MapManager(scannedCode: .constant(""))
     }
 }

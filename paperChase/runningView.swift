@@ -11,7 +11,7 @@ import MapKit
 struct runningView: View {
     
     @ObservedObject var stopWatchManager = StopWatchManager()
-    
+    @Binding var scannedCode: String?
     
     var body: some View {
         VStack{
@@ -36,7 +36,7 @@ struct runningView: View {
             }
             
             MapManager()
-                .frame(width: .infinity, height: 500, alignment: .center)
+                .frame(width: 500, height: 500, alignment: .center)
                 .padding(.top, 60)
             
             Spacer()
@@ -60,6 +60,6 @@ struct TimerButton: View{
 
 struct runningView_Previews: PreviewProvider {
     static var previews: some View {
-        runningView()
+        runningView(scannedCode: .constant("0"))
     }
 }

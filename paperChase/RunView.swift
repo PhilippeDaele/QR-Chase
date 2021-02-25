@@ -13,53 +13,55 @@ struct RunView: View {
     @State var scannedCode: String?
     
     var body: some View{
-        ZStack{
-            Image("city")
-                .resizable()
-                .zIndex(0)
-                .ignoresSafeArea()
-                .blur(radius: 10)
-            
-            VStack(){
-                Text("How to")
-                    .font(Font.custom("GillSans", size: 33))
-                    .foregroundColor(.white)
-                    .italic()
-                    .underline()
-                    .padding()
-                Spacer()
-                Text("1.Press button\n2.Scan QR Code\n3.Start running\n4.Scan QR code\n5.Run ended")
-                    .padding()
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                Spacer()
+        NavigationView{
+            ZStack{
+                Image("city")
+                    .resizable()
+                    .zIndex(0)
+                    .ignoresSafeArea()
+                    .blur(radius: 10)
                 
-                
-                Button(action: {
-                    self.isPresentingScanner = true
-                }) {
-                    Image(systemName: "qrcode.viewfinder")
-                    Text("Scan!")
-                    .fontWeight(.semibold)
-                    .font(.title)
+                VStack(){
+                    Text("How to")
+                        .font(Font.custom("GillSans", size: 33))
+                        .foregroundColor(.white)
+                        .italic()
+                        .underline()
+                        .padding()
+                    Spacer()
+                    Text("1.Press button\n2.Scan QR Code\n3.Start running\n4.Scan QR code\n5.Run ended")
+                        .padding()
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        self.isPresentingScanner = true
+                    }) {
+                        Image(systemName: "qrcode.viewfinder")
+                        Text("Scan!")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                    }
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(40)
+                    
+                    .sheet(isPresented: $isPresentingScanner) {
+                        CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
+                    }
+                    
+                    if self.scannedCode != nil{
+                        NavigationLink("Next page", destination: runningView(scannedCode: self.$scannedCode), isActive: .constant(true)).hidden()
+                    }
+                    
+                    Spacer()
                 }
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.blue]), startPoint: .leading, endPoint: .trailing))
-                    .cornerRadius(40)
-                
-                .sheet(isPresented: $isPresentingScanner) {
-                    CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
-                }
-                
-                // QRscanner stuff
-                if self.scannedCode != nil {
-                    NavigationLink("Next page", destination: runningView())
-                }
-                
-                Spacer()
             }
         }
+        .navigationBarHidden(true)
     }
     
     func handleScan(result: Result<String, CodeScannerView.ScanError>){
@@ -79,6 +81,9 @@ struct RunView: View {
             print(startLong)
             print(endLat)
             print(endLong)
+            
+            let appendString = startLat + ("\n") + startLong + ("\n") + startLat + ("\n") + startLong
+            self.scannedCode = appendString
             
         case .failure(let error):
             print("Scanning failed!")
