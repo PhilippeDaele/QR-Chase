@@ -6,6 +6,10 @@
 	<array>
 		<string>GillSans.ttc</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Would like to have your position.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Would like to have your position.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

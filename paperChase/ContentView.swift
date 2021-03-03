@@ -17,7 +17,7 @@ struct NextView: View { // this is just for testing
 
 func rulePage(){
     if let window = UIApplication.shared.windows.first {
-            window.rootViewController = UIHostingController(rootView: MainPage())
+        window.rootViewController = UIHostingController(rootView: MainPage())
             window.makeKeyAndVisible()
         }
 }

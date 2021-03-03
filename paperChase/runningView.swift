@@ -7,11 +7,14 @@
 
 import SwiftUI
 import MapKit
+import Foundation
+
+
 
 struct runningView: View {
     
     @ObservedObject var stopWatchManager = StopWatchManager()
-    @Binding var scannedCode: String?
+    @EnvironmentObject var coord: coordinates
     
     var body: some View {
         VStack{
@@ -34,10 +37,11 @@ struct runningView: View {
                     }
                 }
             }
-            
+        
             MapManager()
-                .frame(width: 500, height: 500, alignment: .center)
+                .frame(maxWidth: .infinity, minHeight: 500, maxHeight: 800, alignment: .center)
                 .padding(.top, 60)
+                .environmentObject(coord)
             
             Spacer()
         }
@@ -60,6 +64,6 @@ struct TimerButton: View{
 
 struct runningView_Previews: PreviewProvider {
     static var previews: some View {
-        runningView(scannedCode: .constant("0"))
+        runningView()
     }
 }
