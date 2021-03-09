@@ -21,7 +21,6 @@ struct MapManager: UIViewRepresentable {
         }
     }
     
-    
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
@@ -51,7 +50,6 @@ struct MapManager: UIViewRepresentable {
         annotation2.coordinate = CLLocationCoordinate2D(latitude: coords.endLat, longitude: coords.endLong)
         mapView.addAnnotation(annotation2)
 
-        
         return mapView
     }
 
@@ -60,9 +58,10 @@ struct MapManager: UIViewRepresentable {
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         view.setRegion(region, animated: true)
-        
     }
+    
 }
+
 
 struct MapManager_Previews: PreviewProvider {
     static var previews: some View {

@@ -27,7 +27,7 @@ class QueuePlayerUIView: UIView{
         super.init(frame: frame)
         
         // Load video
-        let fileUrl = Bundle.main.url(forResource: "walking", withExtension: "mp4")!
+        let fileUrl = Bundle.main.url(forResource: "runVideo2", withExtension: "mp4")!
         let playerItem = AVPlayerItem(url: fileUrl)
         
         // Setup player

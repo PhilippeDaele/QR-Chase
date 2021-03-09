@@ -8,58 +8,109 @@
 import SwiftUI
 import MapKit
 import Foundation
+import CodeScanner
+import Combine
 
-
+class numSteps: ObservableObject{
+    @Published var stepDate = Date()
+    @Published var stepTime: Double?
+}
 
 struct runningView: View {
-    
     @ObservedObject var stopWatchManager = StopWatchManager()
     @EnvironmentObject var coord: coordinates
     
+    //QR-variables
+    @State var isPresentingScanner = false
+    @State var scannedCode: String?
+    
+    //pedometer variables
+    @EnvironmentObject var dateForNrOfSteps: numSteps
+    
     var body: some View {
-        VStack{
-            Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
-                .font(.largeTitle)
-                .padding(.top, 200)
-                .padding(.bottom, 100)
-                .onAppear(perform: {
-                    self.stopWatchManager.start()
-                })
-            
-            if stopWatchManager.mode == .running{
-                Button(action: { self.stopWatchManager.stop() } ){
-                    TimerButton(label: "Stop", ButtonColor: .red)
-                }
-                
-                if stopWatchManager.mode == .stopped{
-                    Button(action: { self.stopWatchManager.start() } ){
-                        TimerButton(label: "Start", ButtonColor: .blue)
+        GeometryReader{ geometry in
+            NavigationView{
+                ZStack{
+                    MapManager()
+                        .edgesIgnoringSafeArea(.all)
+                        
+                    VStack{
+                        HStack{
+                            Spacer()
+                            
+                            Text(timeChanger())
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .background(Color.black)
+                                .padding()
+                                .onAppear(perform: {
+                                    self.stopWatchManager.start()
+                                    dateForNrOfSteps.stepDate = Date()
+                                })
+                            Spacer()
+                            
+                                Button(action: {
+                                    self.stopWatchManager.stop()
+                                    dateForNrOfSteps.stepTime = self.stopWatchManager.returnTime()
+                                    self.isPresentingScanner = true
+                                } ){
+                                    Image(systemName: "qrcode.viewfinder")
+                                    Text("Scan!")
+                                    .fontWeight(.semibold)
+                                    .font(.title3)
+                                }
+                                    .padding()
+                                    .foregroundColor(.white)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                                    .cornerRadius(40)
+                            
+                            Spacer()
+                        }
+                        Spacer()
+                        if self.scannedCode != nil{
+                            NavigationLink("Next page", destination: resultView().environmentObject(self.coord), isActive: .constant(true)).hidden()
+                        }
+                        
+                    }.sheet(isPresented: $isPresentingScanner){
+                        CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
                     }
                 }
-            }
-        
-            MapManager()
-                .frame(maxWidth: .infinity, minHeight: 500, maxHeight: 800, alignment: .center)
-                .padding(.top, 60)
-                .environmentObject(coord)
-            
-            Spacer()
+            }.navigationBarHidden(true)
         }
     }
-}
-
-struct TimerButton: View{
-    let label: String
-    let ButtonColor: Color
     
-    var body: some View{
-        Text(label)
-            .foregroundColor(.white)
-            .padding(.vertical, 20)
-            .padding(.horizontal, 90)
-            .background(ButtonColor)
-            .cornerRadius(10)
+    func handleScan(result: Result<String, CodeScannerView.ScanError>){
+        self.isPresentingScanner = false
+        
+        switch result{
+        case .success(let code):
+            let details = code.components(separatedBy: "\n")
+            guard details.count == 4 else { return }
+            
+            let startLat = details[0]
+            let startLong = details[1]
+            let endLat = details[2]
+            let endLong = details[3]
+
+            let coords = startLat + "\n" + startLong + "\n" + endLat + "\n" + endLong
+            scannedCode = coords
+            
+        case .failure(let error):
+            print("Scanning failed!")
+            print(error)
+        }
     }
+    
+    func timeChanger() -> String {
+        let seconds =  Int(stopWatchManager.secondsElapsed)
+        let minutes = seconds / 60
+        let hours = minutes / 60
+        
+        let result = String(Int(hours)) + ":" + String(Int(minutes % 60)) + ":" + String(Int(seconds % 60))
+        
+        return result
+    }
+
 }
 
 struct runningView_Previews: PreviewProvider {

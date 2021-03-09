@@ -9,86 +9,86 @@ import SwiftUI
 
 struct MainPage: View {
     var body: some View{
-        GeometryReader { geometry in
+        GeometryReader{ geometry in
             NavigationView{
                 ZStack{
-                    Image("city")
+                    Image("running1")
                         .resizable()
-                        .zIndex(0)
-                        .ignoresSafeArea()
-                        .blur(radius: 10)
-                    
-                    
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geometry.size.width, height: geometry.size.height+200, alignment: .center)
+                        
                     VStack{
-                        Image("runningman-image")
-                            .resizable()
-                            .frame(width: 200, height: 200, alignment: .center)
+                        Spacer()
                             
                         Text("Welcome to QR Chaser")
                             .font(Font.custom("GillSans", size: 33))
                             .foregroundColor(.white)
                             .italic()
-                            .padding()
                             
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
-                            .padding(.horizontal)
-                            .foregroundColor(.white)
-                        
                         Spacer()
-                    
-                        HStack {
-                            NavigationLink(
-                                destination: RunView(),
-                                label: {
-                                    TabBarIcon(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "figure.walk", tabName: "Run")
-                                        .foregroundColor(.black)
-                                })
-
-                            NavigationLink(
-                                destination: CreateView(),
-                                label: {
-                                    TabBarIcon(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "plus", tabName: "Create")
-                                        .foregroundColor(.black)
-                                })
-                             NavigationLink(
-                                destination: ScoreView(),
-                                label: {
-                                    TabBarIcon(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "list.bullet", tabName: "Score")
-                                        .foregroundColor(.black)
-                                })
-                             
-                         }
-                        .frame(width: geometry.size.width, height: geometry.size.height/8)
-                        .background(Color("Color").shadow(radius: 2))
-                     }
-                        .zIndex(1)
-                        .edgesIgnoringSafeArea(.bottom)
+                        
+                        VStack{
+                            NavigationLink(destination: RunView()){
+                                Image(systemName: "figure.walk")
+                                    .font(.system(size: 40, weight: .medium))
+                                    .frame(width: 100, height: 100)
+                                    .foregroundColor(Color.black)
+                                    .background(Color(red: 19 / 255, green: 64 / 255, blue: 116 / 255))
+                                    .clipShape(Circle())
+                            }
+                            .isDetailLink(false)
+                            
+                            Text("Run")
+                                .font(.title3)
+                                .foregroundColor(.white)
+                        }
+                                
+                        HStack{
+                            Spacer()
+                            VStack{
+                                NavigationLink(destination: CreateView()){
+                                    Image(systemName: "plus")
+                                        .font(.system(size: 40, weight: .medium))
+                                        .frame(width: 100, height: 100)
+                                        .foregroundColor(Color.black)
+                                        .background(Color(red: 141 / 255, green: 169 / 255, blue: 196 / 255))
+                                        .clipShape(Circle())
+                                }
+                                .isDetailLink(false)
+                                
+                                
+                                
+                                Text("Create")
+                                    .font(.title3)
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Spacer()
+                            
+                            VStack{
+                                NavigationLink(destination: ScoreView()){
+                                    Image(systemName: "list.bullet")
+                                        .font(.system(size: 40, weight: .medium))
+                                        .frame(width: 100, height: 100)
+                                        .foregroundColor(Color.black)
+                                        .background(Color(red: 238 / 255, green: 244 / 255, blue: 237 / 255))
+                                        .clipShape(Circle())
+                                }
+                                .isDetailLink(false)
+                                
+                                Text("Score")
+                                    .font(.title3)
+                                    .foregroundColor(.white)
+                            }
+                            Spacer()
+                        }
+                        Spacer()
+                    }
                 }
-                }
-                
-         }
+            }.navigationBarHidden(true)
+        }
     }
 }
-
-struct TabBarIcon: View {
-     
-     let width, height: CGFloat
-     let systemIconName, tabName: String
-     
-     
-     var body: some View {
-         VStack {
-             Image(systemName: systemIconName)
-                 .resizable()
-                 .aspectRatio(contentMode: .fit)
-                 .frame(width: width, height: height)
-                 .padding(.top, 10)
-             Text(tabName)
-                 .font(.footnote)
-             Spacer()
-         }
-     }
- }
 
 struct newPage_Previews: PreviewProvider {
     static var previews: some View {

@@ -2,14 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Would like to have your position.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Would like to have your position.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Would like to have your position.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Need access to track nr of steps</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GillSans.ttc</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Would like to have your position.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Would like to have your position.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -38,16 +42,11 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
-		<string>White</string>
+		<string>white</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<true/>
 		<key>UIImageName</key>
-		<string>paper</string>
-		<key></key>
-		<dict>
-			<key>UIImageName</key>
-			<string></string>
-		</dict>
+		<string>final</string>
 	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

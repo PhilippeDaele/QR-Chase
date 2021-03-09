@@ -15,17 +15,19 @@
 		A12656D925E43B1A0071173F /* runningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12656D825E43B1A0071173F /* runningView.swift */; };
 		A12656DC25E441E30071173F /* stopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12656DB25E441E30071173F /* stopWatchManager.swift */; };
 		A12656E725E5455E0071173F /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12656E625E5455E0071173F /* MapManager.swift */; };
+		A19DA18C25F594C300416840 /* QRSaves.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A19DA18A25F594C300416840 /* QRSaves.xcdatamodeld */; };
+		A19DA18F25F594EB00416840 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DA18E25F594EB00416840 /* Persistence.swift */; };
+		A1A209FA25F3E4700062ED3E /* runVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A1A209F925F3E4700062ED3E /* runVideo.mp4 */; };
+		A1D1A74225EFE5E600C41DC9 /* resultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1A74125EFE5E600C41DC9 /* resultView.swift */; };
+		A1DAB1BF25F5B78100BFE764 /* runVideo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A1DAB1BE25F5B78100BFE764 /* runVideo2.mp4 */; };
 		A1EF0EBE25D17BFF004DE4A8 /* paperChaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF0EBD25D17BFF004DE4A8 /* paperChaseApp.swift */; };
 		A1EF0EC025D17BFF004DE4A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF0EBF25D17BFF004DE4A8 /* ContentView.swift */; };
 		A1EF0EC225D17C00004DE4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0EC125D17C00004DE4A8 /* Assets.xcassets */; };
 		A1EF0EC525D17C00004DE4A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0EC425D17C00004DE4A8 /* Preview Assets.xcassets */; };
 		A1EF0ED225D1AB8A004DE4A8 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF0ED125D1AB8A004DE4A8 /* LoopingPlayer.swift */; };
 		A1EF0ED525D1D391004DE4A8 /* paper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0ED425D1D391004DE4A8 /* paper.jpg */; };
-		A1EF0EDF25D2C1B8004DE4A8 /* walking.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0EDE25D2C1B8004DE4A8 /* walking.mp4 */; };
 		A1EF0EE525D2F42E004DE4A8 /* BottomBar-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A1EF0EE425D2F42E004DE4A8 /* BottomBar-SwiftUI */; };
 		A1EF0EE825D43C98004DE4A8 /* GillSans.ttc in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0EE725D43C98004DE4A8 /* GillSans.ttc */; };
-		A1EF0EEB25D44663004DE4A8 /* City skyscrapers design material vector 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0EEA25D44662004DE4A8 /* City skyscrapers design material vector 02.jpg */; };
-		A1EF0EEE25D44CD5004DE4A8 /* AppIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1EF0EED25D44CD5004DE4A8 /* AppIcon.jpeg */; };
 		A1FA19DA25DAAF8C00F5942F /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A1FA19D925DAAF8C00F5942F /* CodeScanner */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,12 @@
 		A12656D825E43B1A0071173F /* runningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runningView.swift; sourceTree = "<group>"; };
 		A12656DB25E441E30071173F /* stopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopWatchManager.swift; sourceTree = "<group>"; };
 		A12656E625E5455E0071173F /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		A19DA18B25F594C300416840 /* QRSaves.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRSaves.xcdatamodel; sourceTree = "<group>"; };
+		A19DA18E25F594EB00416840 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A1A209F925F3E4700062ED3E /* runVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = runVideo.mp4; path = paperChase/Assets.xcassets/runVideo.dataset/runVideo.mp4; sourceTree = SOURCE_ROOT; };
+		A1D1A74125EFE5E600C41DC9 /* resultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultView.swift; sourceTree = "<group>"; };
+		A1DAB1BE25F5B78100BFE764 /* runVideo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = runVideo2.mp4; sourceTree = "<group>"; };
+		A1E9A1D025F6AB1600B1899D /* QRSaves 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "QRSaves 2.xcdatamodel"; sourceTree = "<group>"; };
 		A1EF0EBA25D17BFF004DE4A8 /* paperChase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paperChase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EF0EBD25D17BFF004DE4A8 /* paperChaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paperChaseApp.swift; sourceTree = "<group>"; };
 		A1EF0EBF25D17BFF004DE4A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,10 +54,7 @@
 		A1EF0EC625D17C00004DE4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1EF0ED125D1AB8A004DE4A8 /* LoopingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
 		A1EF0ED425D1D391004DE4A8 /* paper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpg; sourceTree = "<group>"; };
-		A1EF0EDE25D2C1B8004DE4A8 /* walking.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = walking.mp4; sourceTree = "<group>"; };
 		A1EF0EE725D43C98004DE4A8 /* GillSans.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = GillSans.ttc; sourceTree = "<group>"; };
-		A1EF0EEA25D44662004DE4A8 /* City skyscrapers design material vector 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "City skyscrapers design material vector 02.jpg"; sourceTree = "<group>"; };
-		A1EF0EED25D44CD5004DE4A8 /* AppIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppIcon.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +99,15 @@
 				A1EF0EBD25D17BFF004DE4A8 /* paperChaseApp.swift */,
 				A105C35525E17A4300127F23 /* RunView.swift */,
 				A105C35825E17CA500127F23 /* MainPage.swift */,
-				A1EF0ED125D1AB8A004DE4A8 /* LoopingPlayer.swift */,
 				A105C34B25E178E400127F23 /* FrontPage.swift */,
 				A12656D525E438C20071173F /* ScoreView.swift */,
 				A12656D825E43B1A0071173F /* runningView.swift */,
+				A1D1A74125EFE5E600C41DC9 /* resultView.swift */,
+				A19DA18E25F594EB00416840 /* Persistence.swift */,
+				A1EF0ED125D1AB8A004DE4A8 /* LoopingPlayer.swift */,
 				A12656DB25E441E30071173F /* stopWatchManager.swift */,
 				A12656E625E5455E0071173F /* MapManager.swift */,
+				A19DA18A25F594C300416840 /* QRSaves.xcdatamodeld */,
 			);
 			path = paperChase;
 			sourceTree = "<group>";
@@ -115,10 +123,9 @@
 		A1EF0ECD25D1AAFF004DE4A8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A1EF0EEA25D44662004DE4A8 /* City skyscrapers design material vector 02.jpg */,
-				A1EF0EED25D44CD5004DE4A8 /* AppIcon.jpeg */,
 				A1EF0EE725D43C98004DE4A8 /* GillSans.ttc */,
-				A1EF0EDE25D2C1B8004DE4A8 /* walking.mp4 */,
+				A1A209F925F3E4700062ED3E /* runVideo.mp4 */,
+				A1DAB1BE25F5B78100BFE764 /* runVideo2.mp4 */,
 				A1EF0ED425D1D391004DE4A8 /* paper.jpg */,
 			);
 			path = Assets;
@@ -190,12 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EF0EE825D43C98004DE4A8 /* GillSans.ttc in Resources */,
-				A1EF0EDF25D2C1B8004DE4A8 /* walking.mp4 in Resources */,
-				A1EF0EEB25D44663004DE4A8 /* City skyscrapers design material vector 02.jpg in Resources */,
+				A1DAB1BF25F5B78100BFE764 /* runVideo2.mp4 in Resources */,
 				A1EF0ED525D1D391004DE4A8 /* paper.jpg in Resources */,
 				A1EF0EC525D17C00004DE4A8 /* Preview Assets.xcassets in Resources */,
-				A1EF0EEE25D44CD5004DE4A8 /* AppIcon.jpeg in Resources */,
 				A1EF0EC225D17C00004DE4A8 /* Assets.xcassets in Resources */,
+				A1A209FA25F3E4700062ED3E /* runVideo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A105C34C25E178E400127F23 /* FrontPage.swift in Sources */,
+				A19DA18C25F594C300416840 /* QRSaves.xcdatamodeld in Sources */,
 				A12656D625E438C20071173F /* ScoreView.swift in Sources */,
+				A19DA18F25F594EB00416840 /* Persistence.swift in Sources */,
 				A105C35625E17A4300127F23 /* RunView.swift in Sources */,
 				A1EF0EC025D17BFF004DE4A8 /* ContentView.swift in Sources */,
 				A1EF0EBE25D17BFF004DE4A8 /* paperChaseApp.swift in Sources */,
@@ -215,6 +223,7 @@
 				A12656D925E43B1A0071173F /* runningView.swift in Sources */,
 				A105C35D25E186DA00127F23 /* CreateView.swift in Sources */,
 				A105C35925E17CA500127F23 /* MainPage.swift in Sources */,
+				A1D1A74225EFE5E600C41DC9 /* resultView.swift in Sources */,
 				A1EF0ED225D1AB8A004DE4A8 /* LoopingPlayer.swift in Sources */,
 				A12656DC25E441E30071173F /* stopWatchManager.swift in Sources */,
 			);
@@ -437,6 +446,20 @@
 			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		A19DA18A25F594C300416840 /* QRSaves.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1E9A1D025F6AB1600B1899D /* QRSaves 2.xcdatamodel */,
+				A19DA18B25F594C300416840 /* QRSaves.xcdatamodel */,
+			);
+			currentVersion = A19DA18B25F594C300416840 /* QRSaves.xcdatamodel */;
+			path = QRSaves.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1EF0EB225D17BFF004DE4A8 /* Project object */;
 }
