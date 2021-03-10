@@ -23,6 +23,9 @@ In this project, we develop an outdoor paper chase game: The player is on a pred
 ## Version 
 * Version 1.0
 
+## Licence
+* check out [Licence](https://github.com/PhilippeDaele/QR-Chase/blob/main/LICENSE)
+
 ## How-to use this code
 For this to work you will need a Mac with Xcode 12.4+
 
