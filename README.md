@@ -6,6 +6,9 @@ Project description
 
 In this project, we develop an outdoor paper chase game: The player is on a predefined tour and must identify with a camera certain objects or QR codes on selected locations. The duration of each run and the distance is measured and can be compared online. Multi-player functionality would be great. We recommend having access to a physical mobile device (Android or iOS).
 
+Video demo:
+https://www.youtube.com/watch?v=_bytIzM_is0
+
 ## Tests
 #### Works on
 * iPhone 7 and later
