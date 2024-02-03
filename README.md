@@ -4,7 +4,7 @@ QR Chase
 
 Project description
 
-In this project, we develop an outdoor paper chase game: The player is on a predefined tour and must identify with a camera certain objects or QR codes on selected locations. The duration of each run and the distance is measured and can be compared online. Multi-player functionality would be great. We recommend having access to a physical mobile device (Android or iOS).
+In this project, I developed an outdoor paper chase game: The player is on a predefined tour and must identify certain objects or QR codes on selected locations with a camera. The duration of each run and the distance are measured and can be compared online. Multi-player functionality would be great. We recommend accessing a physical mobile device (Android or iOS).
 
 Video demo:
 https://www.youtube.com/watch?v=_bytIzM_is0
@@ -34,7 +34,7 @@ For this to work you will need a Mac with Xcode 12.4+
 
 Steps:
 
-1. Start by pressing on the button "code" and then "open with Xcode"
+1. Start by pressing the button "code" and then "open with Xcode"
 2. Then choose your location for storing
 3. After cloning of the project, plug in your iPhone device to your computer
 4. Build the device
